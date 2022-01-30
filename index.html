@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet"> 
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <title>Frontend Mentor | Intro component with sign up form</title>
+
+</head>
+<body>
+  <main>
+<section class="text-section">
+<article class="main-text">
+  <h1 class="title main-text-title"> Learn to code by watching others</h1>
+  <p class="text main-text-paragraph">See how experienced developers solve problems in real-time. Watching scripted tutorials is great, 
+    but understanding how developers think is invaluable.</p>
+</article>
+</section>
+<section class="form-section">
+  <div class="header-text-container">
+    <p class="text header-text">
+      <em>Try it free 7 days</em> then $20/mo. thereafter</p>
+  </div>
+  <div class="form-container">
+    <form name="myForm" id="myForm" >
+      <label>
+        <input class="input inputfullfill" id="fn-container" type="text" placeholder="First Name" value="" name="fname">
+        <p class="warning-text" id="fn-warning">First Name cannot be empty</p>
+      </label>
+      <label>
+        
+        <input class="input inputfullfill" id="ln-container" type="text" placeholder="Last Name" value="" name="lname">
+        <p class="warning-text" id="ln-warning">Last Name cannot be empty</p>
+      </label>
+      <label>
+        
+        <input class="input" id="ea-container" type="text" placeholder="Email Address" value="" name="email">
+        <p class="warning-text" id="ea-warning">Looks like this is not an email</p>
+      </label>
+      <label>
+        
+        <input class="input inputfullfill" id="pw-container" type="text" placeholder="Password" value="" name="password">
+        <p class="warning-text" id="pw-warning">Password cannot be empty</p>
+      </label>
+      <label>
+        <input class="submit-btn" id="submit-btn" type="submit" value="CLAIM YOUR FREE TRIAL"value="" name="submit">
+      </label>
+    </form>
+    <script>
+      const myForm = document.getElementById("myForm");
+      var allinputs = document.querySelectorAll('.inputfullfill');
+      var myLength = allinputs.length;
+      var input;
+      var emailInput = document.getElementById("ea-container");
+    
+
+      myForm.addEventListener("submit", (e) => {
+      e.preventDefault();
+
+        for (var i = 0; i < myLength; ++i) {
+        input = allinputs[i];
+          if (input.value === "") {
+            input.style.border = "solid 1px red";
+          }  
+        }
+      });
+    </script>
+    <p class="text terms-text">By clicking the button, you are agreeing to our <a class="link-cndtn" href="">Terms and Services</a></p>
+  </div>
+</section>
+</main>
+</body>
+</html>
