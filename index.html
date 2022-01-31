@@ -28,47 +28,26 @@
   <div class="form-container">
     <form name="myForm" id="myForm" >
       <label>
-        <input class="input inputfullfill" id="fn-container" type="text" placeholder="First Name" value="" name="fname">
+        <input class="input inputfullfill" id="fn-container" type="text" placeholder="First Name" value="" name="fname"><img class="warning-img" src="images/icon-error.svg"></input>
         <p class="warning-text" id="fn-warning">First Name cannot be empty</p>
       </label>
       <label>
-        
-        <input class="input inputfullfill" id="ln-container" type="text" placeholder="Last Name" value="" name="lname">
+        <input class="input inputfullfill" id="ln-container" type="text" placeholder="Last Name" value="" name="lname"><img class="warning-img" src="images/icon-error.svg"></input>
         <p class="warning-text" id="ln-warning">Last Name cannot be empty</p>
       </label>
       <label>
-        
-        <input class="input" id="ea-container" type="text" placeholder="Email Address" value="" name="email">
+        <input class="input inputfullfill" id="ea-container" type="text" placeholder="Email Address" value="" name="email"><img class="warning-img" src="images/icon-error.svg"></input>
         <p class="warning-text" id="ea-warning">Looks like this is not an email</p>
       </label>
       <label>
-        
-        <input class="input inputfullfill" id="pw-container" type="text" placeholder="Password" value="" name="password">
+        <input class="input inputfullfill" id="pw-container" type="text" placeholder="Password" value="" name="password"><img class="warning-img" src="images/icon-error.svg"></input>
         <p class="warning-text" id="pw-warning">Password cannot be empty</p>
       </label>
       <label>
         <input class="submit-btn" id="submit-btn" type="submit" value="CLAIM YOUR FREE TRIAL"value="" name="submit">
       </label>
     </form>
-    <script>
-      const myForm = document.getElementById("myForm");
-      var allinputs = document.querySelectorAll('.inputfullfill');
-      var myLength = allinputs.length;
-      var input;
-      var emailInput = document.getElementById("ea-container");
-      
-
-      myForm.addEventListener("submit", (e) => {
-      e.preventDefault();
-
-        for (var i = 0; i < myLength; ++i) {
-        input = allinputs[i];
-          if (input.value === "") {
-            input.style.border = "solid 1px red";
-          }  
-        }
-      });
-    </script>
+    <script src="index.js"></script>
     <p class="text terms-text">By clicking the button, you are agreeing to our <a class="link-cndtn" href="">Terms and Services</a></p>
   </div>
 </section>
